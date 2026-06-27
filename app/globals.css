@@ -52,3 +52,15 @@ body {
   animation: fadeUp 0.6s ease forwards;
   animation-delay: 0.85s;
 }
+
+/* ── Scroll fade-in (CSS-only, no JS) ── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-scroll {
+  animation: fadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 0% entry 35%;
+}

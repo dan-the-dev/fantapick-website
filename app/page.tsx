@@ -249,6 +249,59 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SECTION 5: TEASER LEGA SERIE A ── */}
+      <section
+        className="py-20 px-6 text-center"
+        style={{
+          background: "linear-gradient(180deg, var(--shield) 0%, var(--navy) 100%)",
+        }}
+      >
+        <div className="fade-scroll max-w-[560px] mx-auto flex flex-col items-center gap-5">
+          <span
+            className="font-body font-medium uppercase tracking-widest px-4 py-1.5 rounded-full text-xs"
+            style={{
+              background: "rgba(240, 180, 41, 0.12)",
+              color: "var(--gold)",
+              letterSpacing: "0.1em",
+            }}
+          >
+            🛡️ Coming August 2025
+          </span>
+
+          <h2
+            className="font-display font-black uppercase leading-tight"
+            style={{ fontSize: "clamp(1.8rem, 5vw, 3rem)" }}
+          >
+            Il Mondiale finisce.
+            <br />
+            La Serie A inizia.
+          </h2>
+
+          <p
+            className="font-body leading-relaxed"
+            style={{ color: "var(--muted)", fontSize: "1rem" }}
+          >
+            Ad agosto arriva la Lega FantaPick — draft stagionale,
+            mini draft settimanale, leghe private tra amici.
+            <br />
+            Chi è già nel gruppo Telegram entra in lista per la demo.
+          </p>
+
+          <a
+            href={TELEGRAM_URL}
+            className="font-display font-bold uppercase tracking-wide px-7 py-3.5 rounded-lg mt-1 transition-colors hover:bg-gold/10"
+            style={{
+              border: "2px solid var(--gold)",
+              color: "var(--gold)",
+              fontSize: "1rem",
+              letterSpacing: "0.04em",
+            }}
+          >
+            Entra nel gruppo →
+          </a>
+        </div>
+      </section>
+
       {/* ── FOOTER ── */}
       <footer
         className="py-8 px-6 flex items-center justify-center gap-3 border-t"
