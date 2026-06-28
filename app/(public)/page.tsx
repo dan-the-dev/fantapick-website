@@ -1,74 +1,15 @@
+import { LogoIcon } from "@/components/Logo";
+import { SiteFooter } from "@/components/SiteFooter";
+import { SiteHeader } from "@/components/SiteHeader";
+
 const GAME_URL = "https://wc26.fantapick.it";
 const TELEGRAM_URL = "https://t.me/fantapick";
-
-function LogoIcon({ size = 56 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 56 56"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="FantaPick"
-    >
-      {/* Shield body */}
-      <path
-        d="M28 4L6 12V28C6 40 16 50 28 52C40 50 50 40 50 28V12L28 4Z"
-        fill="#0D2A52"
-        stroke="#1A5A99"
-        strokeWidth="1.5"
-      />
-      {/* Gold star */}
-      <path
-        d="M28 16L29.8 21.6H35.7L31 25L32.9 30.6L28 27.2L23.1 30.6L25 25L20.3 21.6H26.2L28 16Z"
-        fill="#F0B429"
-      />
-      {/* White arrow pointing down */}
-      <path
-        d="M28 32V42M28 42L23 37M28 42L33 37"
-        stroke="#FFFFFF"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function LogoSmall() {
-  return (
-    <svg
-      width={32}
-      height={32}
-      viewBox="0 0 56 56"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-label="FantaPick"
-    >
-      <path
-        d="M28 4L6 12V28C6 40 16 50 28 52C40 50 50 40 50 28V12L28 4Z"
-        fill="#0D2A52"
-        stroke="#1A5A99"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M28 16L29.8 21.6H35.7L31 25L32.9 30.6L28 27.2L23.1 30.6L25 25L20.3 21.6H26.2L28 16Z"
-        fill="#F0B429"
-      />
-      <path
-        d="M28 32V42M28 42L23 37M28 42L33 37"
-        stroke="#FFFFFF"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
 
 export default function Home() {
   return (
     <main>
+      <SiteHeader />
+
       {/* ── SECTION 1: HERO ── */}
       <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20">
         <div className="anim-1">
@@ -302,26 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── FOOTER ── */}
-      <footer
-        className="py-8 px-6 flex items-center justify-center gap-3 border-t"
-        style={{ borderColor: "var(--shield)" }}
-      >
-        <LogoSmall />
-        <span
-          className="font-body text-sm"
-          style={{ color: "var(--muted)" }}
-        >
-          FantaPick 2026 ·{" "}
-          <a
-            href={TELEGRAM_URL}
-            className="hover:underline"
-            style={{ color: "var(--muted)" }}
-          >
-            Telegram
-          </a>
-        </span>
-      </footer>
+      <SiteFooter />
     </main>
   );
 }
